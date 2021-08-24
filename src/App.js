@@ -83,9 +83,6 @@ export default function App() {
       signer
     );
 
-    let count = await waveportalContract.getTotalWaves();
-    console.log("Retrieved total wave count ", count.toNumber());
-
     const waveTxn = await waveportalContract.wave(message, { gas: 300000 });
     console.log("waveTxn mining -- ", waveTxn.hash);
     await waveTxn.wait();
