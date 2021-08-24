@@ -83,7 +83,7 @@ export default function App() {
       signer
     );
 
-    const waveTxn = await waveportalContract.wave(message, { gas: 300000 });
+    const waveTxn = await waveportalContract.wave(message);
     console.log("waveTxn mining -- ", waveTxn.hash);
     await waveTxn.wait();
     console.log("waveTxn mined -- ", waveTxn.hash);
