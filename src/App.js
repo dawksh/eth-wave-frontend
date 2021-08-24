@@ -63,7 +63,7 @@ export default function App() {
     // get for new waves
     waveportalContract.on("NewWave", (from, timestamp, message) => {
       console.log("NewWave", from, timestamp, message);
-      setAllWaves((oldArray) => [
+      setWaves((oldArray) => [
         ...oldArray,
         {
           address: from,
